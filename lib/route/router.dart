@@ -20,7 +20,13 @@ final router = GoRouter(
           GoRoute(
               path: 'list',
               name: list,
-              builder: (_, GoRouterState state) => const ListPage()),
+              pageBuilder: (_, GoRouterState state) => CustomTransitionPage(
+                  child: const ListPage(),
+                  transitionsBuilder: (BuildContext context,
+                          Animation<double> animation,
+                          Animation<double> secondaryAnimation,
+                          Widget child) =>
+                      FadeTransition(opacity: animation, child: child))),
           GoRoute(
               path: 'detail',
               name: detail,

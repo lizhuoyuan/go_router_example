@@ -443,9 +443,11 @@ class MyNavObserver extends NavigatorObserver {
 
 ```
 
-[![pub package](https://img.shields.io/pub/v/flutter_screenutil.svg)](https://pub.dev/packages/go_router)  
-[1] [example](https://github.com/lizhuoyuan/go_router_example)  
+[1] [example](https://github.com/lizhuoyuan/go_router_example)
+
 [2] [go_router原始github地址](https://github.com/csells/go_router)
+
+[3] [go_router | Flutter Package (pub.dev)](https://pub.dev/packages/go_router)
 
 
 

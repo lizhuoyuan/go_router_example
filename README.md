@@ -443,8 +443,8 @@ class MyNavObserver extends NavigatorObserver {
 
 ```
 
-[![pub package](https://img.shields.io/pub/v/flutter_screenutil.svg)](https://pub.dev/packages/go_router)
-[1] [example](https://github.com/lizhuoyuan/go_router_example)
+[![pub package](https://img.shields.io/pub/v/flutter_screenutil.svg)](https://pub.dev/packages/go_router)  
+[1] [example](https://github.com/lizhuoyuan/go_router_example)  
 [2] [go_router原始github地址](https://github.com/csells/go_router)
 
 

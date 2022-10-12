@@ -338,7 +338,8 @@ GoRouter.of(context).routerDelegate.currentConfiguration
 
 你是希望登录之后,直接就进到帖子详情去看美女了.
 
-![飞书20221012-095002](/Users/lizhuoyuan/Downloads/飞书20221012-095002.gif)
+![image](https://user-images.githubusercontent.com/15923901/195296970-e66a8987-980c-45e4-8fa8-e4b727826d69.png)
+
 
 那如果用`go_router`要怎么实现想要的效果呢?
 

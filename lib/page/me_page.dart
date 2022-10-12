@@ -9,7 +9,10 @@ class MePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('登录:${Constant.login}'),
+        title: const Text('我的页面'),
+      ),
+      body: Center(
+        child: Text('是否已经登录:${Constant.login}'),
       ),
     );
   }

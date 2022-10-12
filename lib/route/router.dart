@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:go_router_example/page/me_page.dart';
@@ -8,6 +10,7 @@ import '../page/error_page.dart';
 import '../page/home_page.dart';
 import '../page/list_page.dart';
 import '../page/login_page.dart';
+import 'my_nav_observer.dart';
 
 final router = GoRouter(
   initialLocation: '/',
@@ -45,17 +48,20 @@ final router = GoRouter(
           GoRoute(
               path: 'login',
               name: login,
-              builder: (context, state) =>
-                  LoginPage(location: state.queryParams['location'])),
+              builder: (context, state) => LoginPage(
+                    location: state.queryParams['location'],
+                    text: state.queryParams['text'],
+                  )),
         ]),
   ],
   errorBuilder: (context, GoRouterState state) {
     return const ErrorPage();
   },
   debugLogDiagnostics: true,
+  observers: [MyNavObserver()],
 );
 
-String? loginRedirect(GoRouterState state) {
+FutureOr<String?> loginRedirect(BuildContext context, GoRouterState state) {
   debugPrint('loginRedirect :${state.name}');
 
   final loggingIn = state.subloc == 'login';
@@ -64,6 +70,7 @@ String? loginRedirect(GoRouterState state) {
   if (!Constant.login && !loggingIn) {
     return state.namedLocation(login, queryParams: {
       'location': state.location,
+      'text': '未登录无法跳转到对应页面',
     });
     //return '/login?location=${state.location}';
   }

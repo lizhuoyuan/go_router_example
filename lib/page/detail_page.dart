@@ -8,11 +8,15 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(GoRouter.of(context).location);
-    print(GoRouter.of(context).routerDelegate.currentConfiguration.last.subloc);
+    debugPrint(GoRouter.of(context).location);
+    debugPrint(
+        GoRouter.of(context).routerDelegate.currentConfiguration.last.subloc);
     return Scaffold(
       appBar: AppBar(
-        title: Text('id:$id'),
+        title: const Text('Detail Page'),
+      ),
+      body: Center(
+        child: Text('id:$id'),
       ),
     );
   }

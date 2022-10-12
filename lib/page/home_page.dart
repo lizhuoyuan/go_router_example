@@ -42,11 +42,13 @@ class _MyHomePageState extends State<MyHomePage> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GestureDetector(
-                  onTap: () {
-                    context.push('/me');
-                  },
-                  child: const Text('Me')),
+              ElevatedButton(
+                child: const Text('个人设置'),
+                onPressed: () {
+                  context.pushNamed(me);
+                  // context.push('/me');
+                },
+              ),
               const SizedBox(height: 20),
               ElevatedButton(
                 child: const Text('logout'),

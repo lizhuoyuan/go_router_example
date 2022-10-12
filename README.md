@@ -92,7 +92,7 @@ GoRoute的构造函数：
 | property    | description                  | example 1                | example 2                |
 | ----------- | ---------------------------- | ------------------------ | ------------------------ |
 | location    | 完整路由的位置，包括查询参数 | `/login?from=/family/f2` | `/family/f2/person/p1`   |
-| subloc      | 子路由的位置，不包含查询参数 | /login                   | /family/2                |
+| subloc      | 子路由的位置，不包含查询参数 | /login                   | /family/f2                |
 | name        | 路由名称                     | login                    | /family                  |
 | path`       | 路由路径                     | login                    | /family/:fid             |
 | fullpath    | 该子路由的完整路径           | /login                   | /family/:fid             |
@@ -443,7 +443,9 @@ class MyNavObserver extends NavigatorObserver {
 
 ```
 
-
+[![pub package](https://img.shields.io/pub/v/flutter_screenutil.svg)](https://pub.dev/packages/go_router)
+[1] [example](https://github.com/lizhuoyuan/go_router_example)
+[2] [go_router原始github地址](https://github.com/csells/go_router)
 
 
 
